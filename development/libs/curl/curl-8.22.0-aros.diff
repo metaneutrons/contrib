@@ -1,6 +1,6 @@
-diff -ruN --strip-trailing-cr curl-8.21.0/configure curl-8.21.0.aros/configure
---- curl-8.21.0/configure	2026-06-24 06:53:29.000000000 +0100
-+++ curl-8.21.0.aros/configure	2026-07-28 21:26:25.919710494 +0100
+diff -ruN --strip-trailing-cr curl-8.22.0/configure curl-8.22.0.aros/configure
+--- curl-8.22.0/configure	2026-06-24 06:53:29.000000000 +0100
++++ curl-8.22.0.aros/configure	2026-07-28 21:26:25.919710494 +0100
 @@ -48402,6 +48402,9 @@
            powerpc-*amigaos*)
                          PTHREAD=" -lpthread"
@@ -11,9 +11,9 @@ diff -ruN --strip-trailing-cr curl-8.21.0/configure curl-8.21.0.aros/configure
            *)
              CFLAGS="$CFLAGS -pthread"
              ;;
-diff -ruN --strip-trailing-cr curl-8.21.0/configure.ac curl-8.21.0.aros/configure.ac
---- curl-8.21.0/configure.ac	2026-06-24 06:53:29.000000000 +0100
-+++ curl-8.21.0.aros/configure.ac	2026-07-28 21:26:25.917311394 +0100
+diff -ruN --strip-trailing-cr curl-8.22.0/configure.ac curl-8.22.0.aros/configure.ac
+--- curl-8.22.0/configure.ac	2026-06-24 06:53:29.000000000 +0100
++++ curl-8.22.0.aros/configure.ac	2026-07-28 21:26:25.917311394 +0100
 @@ -4288,6 +4288,10 @@
              dnl No -pthread option, but link with -lpthread
              PTHREAD=" -lpthread"
@@ -25,9 +25,9 @@ diff -ruN --strip-trailing-cr curl-8.21.0/configure.ac curl-8.21.0.aros/configur
            *)
              CFLAGS="$CFLAGS -pthread"
              ;;
-diff -ruN --strip-trailing-cr curl-8.21.0/lib/amigaos.c curl-8.21.0.aros/lib/amigaos.c
---- curl-8.21.0/lib/amigaos.c
-+++ curl-8.21.0.aros/lib/amigaos.c
+diff -ruN --strip-trailing-cr curl-8.22.0/lib/amigaos.c curl-8.22.0.aros/lib/amigaos.c
+--- curl-8.22.0/lib/amigaos.c
++++ curl-8.22.0.aros/lib/amigaos.c
 @@ -237,3 +237,78 @@
  #endif /* HAVE_PROTO_BSDSOCKET_H */
  
@@ -107,9 +107,9 @@ diff -ruN --strip-trailing-cr curl-8.21.0/lib/amigaos.c curl-8.21.0.aros/lib/ami
 +  return WaitSelect(nfds, readfds, writefds, errorfds, timeout, NULL);
 +}
 +#endif /* __AROS__ */
-diff -ruN --strip-trailing-cr curl-8.21.0/lib/curl_setup.h curl-8.21.0.aros/lib/curl_setup.h
---- curl-8.21.0/lib/curl_setup.h
-+++ curl-8.21.0.aros/lib/curl_setup.h
+diff -ruN --strip-trailing-cr curl-8.22.0/lib/curl_setup.h curl-8.22.0.aros/lib/curl_setup.h
+--- curl-8.22.0/lib/curl_setup.h
++++ curl-8.22.0.aros/lib/curl_setup.h
 @@ -671,6 +671,30 @@
  
  #  endif /* MSDOS */
@@ -153,9 +153,9 @@ diff -ruN --strip-trailing-cr curl-8.21.0/lib/curl_setup.h curl-8.21.0.aros/lib/
  #else
  #define SOCKERRNO         errno
  #define SET_SOCKERRNO(x)  (errno = (x))
-diff -ruN --strip-trailing-cr curl-8.21.0/lib/curlx/wait.c curl-8.21.0.aros/lib/curlx/wait.c
---- curl-8.21.0/lib/curlx/wait.c
-+++ curl-8.21.0.aros/lib/curlx/wait.c
+diff -ruN --strip-trailing-cr curl-8.22.0/lib/curlx/wait.c curl-8.22.0.aros/lib/curlx/wait.c
+--- curl-8.22.0/lib/curlx/wait.c
++++ curl-8.22.0.aros/lib/curlx/wait.c
 @@ -33,6 +33,10 @@
  #include <unistd.h>
  #endif
@@ -178,9 +178,9 @@ diff -ruN --strip-trailing-cr curl-8.21.0/lib/curlx/wait.c curl-8.21.0.aros/lib/
  #else
    /* avoid using poll() for this since it behaves incorrectly with no sockets
       on Apple operating systems */
-diff -ruN --strip-trailing-cr curl-8.21.0/lib/hostip4.c curl-8.21.0.aros/lib/hostip4.c
---- curl-8.21.0/lib/hostip4.c
-+++ curl-8.21.0.aros/lib/hostip4.c
+diff -ruN --strip-trailing-cr curl-8.22.0/lib/vdns/hostip4.c curl-8.22.0.aros/lib/vdns/hostip4.c
+--- curl-8.22.0/lib/vdns/hostip4.c
++++ curl-8.22.0.aros/lib/vdns/hostip4.c
 @@ -110,6 +110,12 @@
    struct hostent *buf = NULL;
  #endif
