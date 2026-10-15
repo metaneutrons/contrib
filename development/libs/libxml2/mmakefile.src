@@ -7,7 +7,7 @@ include $(SRCDIR)/config/aros-contrib.cfg
 #MM- development-libxml2 : development-libiconv
 
 XML2_VERS := 2.15
-XML2_VERSFULL := $(XML2_VERS).3
+XML2_VERSFULL := $(XML2_VERS).4
 
 REPOSITORIES := https://download.gnome.org/sources/libxml2/$(XML2_VERS) \
  http://bbgentoo.ilb.ru/distfiles \
