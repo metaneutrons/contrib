@@ -9,7 +9,7 @@ REPOSITORIES = http://www.openssl.org/source/ \
  http://www.openssl.org/source/old/$(OPENSSL_RELEASE)/ \
  ftp://mirror.switch.ch/mirror/openssl/source/old/$(OPENSSL_RELEASE)/
 
-OPENSSL_VERSION=$(OPENSSL_RELEASE).1
+OPENSSL_VERSION=$(OPENSSL_RELEASE).3
 ARCHBASE := openssl-$(OPENSSL_VERSION)
 OPENSSL_SOURCE := $(PORTSDIR)/openssl/$(ARCHBASE)
 OPENSSL_BUILD_DIR := $(GENDIR)/$(CURDIR)/$(ARCHBASE)
